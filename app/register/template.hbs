@@ -3,30 +3,20 @@
     <div class="content">
       <h2 class="register-title">Register</h2>
       {{#simple-form onsubmit=(action "registerUser") as |inputs|}}
-        {{input class="input__userName" type="text" placeholder="Username" }} {{input class="input__email" type="email" placeholder="Email" }} {{input class="input__password" type="password" placeholder="Password" }}
+        {{input class="email" type="text" placeholder="Email" value=user.email}}
+        {{input class="password" type="password" placeholder="Password" value=user.password}}
         <div class="btn-container">
-          <a class="button is-danger">BACK</a>
-          <a class="button is-success">REGISTER</a>
+          {{#link-to "index" class="button-links button-links__back" }}
+          <p class="button-links">BACK</p>
+          {{/link-to}}
+          {{#link-to "index" class="button-links button-links__register" }}
+          <button class="button-links__register" type="submit">REGISTER</button>
+          {{/link-to}}
         </div>
       {{/simple-form}}
     </div>
-
-     {{!-- {{#simple-form onsubmit=(action "register") as |inputs|}} --}}
-
-     {{!-- {{#simple-form onsubmit=(action "registerUser") as |inputs|}} --}}
-     {{input class="input__userName" type="text" placeholder="Username" }}
-     {{input class="input__email" type="email" placeholder="Email" }}
-     {{input class="input__password" type="password" placeholder="Password" }}
-     {{!-- {{/simple-form}} --}}
-     <div class="btn-container">
-         <a class="button is-danger">BACK</a>
-         <a class="button is-success">REGISTER</a>
-       </div>
      </div>
    </div>
- </div>
-  </div>
-</div>
 
 
 {{outlet}}

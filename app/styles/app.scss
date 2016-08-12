@@ -12,10 +12,11 @@ $primary: #ed6c63;
   justify-content: center;
   max-width: 60rem;
   margin: auto;
+  background: #fff;
 }
 
 .content {
-  border: 2px solid #eee;
+  border: 2px solid #fff;
   padding: 2rem;
   box-shadow: 0 5px 34px -1px rgba(0,0,0,0.75);
 }
@@ -51,20 +52,34 @@ $primary: #ed6c63;
   border-radius: 8%;
   color: #fff;
 
+  &__submit {
+    outline: none;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-radius: 8%;
+    color: #fff;
+    background: #00A4D9;
+    border: 1px solid #00A4D9;
+  }
+
   &__back {
-    border: 1px solid red;
-    background: red;
+    border: 1px solid #ed6c63;
+    background: #ed6c63;
   }
   &__login {
-    background: teal;
-    border: 1px solid teal;
+    background: #00A4D9;
+    border: 1px solid #00A4D9;
     margin-left: 0.5rem;
-    padding: 0.3rem 0.5rem;
     font-size: 1rem;
   }
   &__register {
-    border: 1px solid green;
-    background: green;
+    border: 1px solid #5eadb2;
+    background: #5eadb2;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-radius: 8%;
+    color: #fff;
   }
 }
 
@@ -80,4 +95,13 @@ $primary: #ed6c63;
 .admin__title {
   font-size: 2em;
   color: black;
+}
+.game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-button {
+  margin: 0;
 }

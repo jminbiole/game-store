@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
       const authenticator = 'authenticator:application';
 
       this.get('session').authenticate(authenticator,
-        { identification: user.userName, password: user.password });
+        { identification: user.email, password: user.password });
     },
   },
 });
